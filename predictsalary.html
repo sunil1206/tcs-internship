@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title> dashboard
+		</title>
+	    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	    <!----css3---->
+        <link rel="stylesheet" href="/static/css/custom.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+	
+	
+	
+	<!--google material icon-->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+
+  <!--top navigation bar--> 
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="margin-left: 335px;
+      font-size: 35px">HR Salary Prediction Dashboard</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  href="/templates/predictsalary.html">Prediction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/templates/data.html">Data </a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/templates/charts.html">Charts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/templates/insight.html">Insight</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+    
+        <nav class="navbar navbar-light bg-light" style="width: 83px;
+        height: 68px;
+        background: content-box;">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="/static/img/apple-touch-icon.png" alt="" width="30" height="45">
+              </a>
+            </div>
+          </nav>
+       
+  </nav>
+
+
+
+
+  <!-- offcanvas -->
+  <div
+  class="offcanvas offcanvas-start sidebar-nav bg-dark"
+  tabindex="-1"
+  id="sidebar"
+  style="margin-top: 98px;"
+>
+  <div class="offcanvas-body p-0">
+    <nav class="navbar-dark">
+      <ul class="navbar-nav">
+        <li>
+          <div class="text-muted small fw-bold text-uppercase px-3">
+            
+          </div>
+        </li>
+        <li>
+            <a class="btn btn-primary" href="/templates/index.html" role="button" style="margin-top: 11px">Dashboard</a>
+          <!-- <a href="#" class="nav-link px-3 active">
+            <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+            <span>Dashboard</span>
+          </a> -->
+        </li>
+        <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+        <li>
+          <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+            Interface
+          </div>
+        </li>
+        <li>
+          <!-- <a
+            class="nav-link px-3 sidebar-link"
+            data-bs-toggle="collapse"
+            href="https://google.com"
+          > -->
+            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+            <!-- <span>Predict Salary</span> -->
+            <a class="btn btn-primary" href="/templates/predictsalary.html" role="button">Predict Salary</a>
+            
+            <!-- <span class="ms-auto">
+              <span class="right-icon">
+                <i class="bi bi-chevron-down"></i>
+                <a class="btn btn-primary" href="/templates/data.html" role="button" style="margin-top: 16px;"> Data Understanding </a>
+
+              </span>
+            </span> -->
+          </a>
+          <div class="collapse" id="layouts">
+            <ul class="navbar-nav ps-3">
+              <li>
+                <a href="" class="nav-link px-3">
+                  <span class="me-2"
+                    ><i class="bi bi-speedometer2"></i
+                  ></span>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        
+        <!-- <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+        <li>
+          <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+            Addons
+          </div>
+        </li> -->
+        <!-- <li>
+          
+            <a class="btn btn-primary" href="/templates/charts.html" role="button">Charts</a>
+          </a>
+        </li> -->
+        <!-- <li>
+            <a class="btn btn-primary" href="/templates/insight.html" role="button" style="margin-top: 16px;">Insight</a> -->
+          <!-- <a href="#" class="nav-link px-3">
+            <span class="me-2"><i class="bi bi-table"></i></span>
+            <span>Insight</span>
+          </a> -->
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<!-- offcanvas -->
+
+
+<div class="col-xl-8 col-lg-7" style="margin-top:60px">
+    <div class="card shadow mb-4" style="color: blue; margin-left: 380px;">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <div class="row bg-warning border rounded  p-2 text-center">
+              <div class="col" style="width: 905px;">
+                <h4 class=""><B>Salary Prediction Model</B></h4>
+              </div>
+            </div>      
+        </div>
+        
+
+
+        <!-- Card Body -->
+        <!-- <div class="card-body">
+            <div class="chart-area"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+
+            <div class="mb-3">
+              <label for="" class="form-label"></label>
+              <form action="{{url_for('predict')}}"method="post" id="input head">
+              <input type="number"
+                class="form-control" name="DeptID" id="input" aria-describedby="helpId" placeholder="DeptID">
+              <input type="number"
+                class="form-control" name="PositionID" id="input" aria-describedby="helpId" placeholder="PositionID">
+              <input type="number"
+                class="form-control" name="RaceDesc" id="input" aria-describedby="helpId" placeholder="RaceDesc">
+              <input type="number"
+                class="form-control" name="SpecialProjectsCount" id="input" aria-describedby="helpId" placeholder="SpecialProjectsCount">
+              
+              <input type="number"
+                class="form-control" name="Age" id="input" aria-describedby="helpId" placeholder="Age">
+              <input type="number"
+                class="form-control" name="PerfScoreID" id="input" aria-describedby="helpId" placeholder="PerfScoreID">
+              <input type="number"
+                class="form-control" name="Experience" id="input" aria-describedby="helpId" placeholder="Experience">
+              <input type="number"
+                class="form-control" name="carrierbreak" id="input" aria-describedby="helpId" placeholder="carrierbreak">
+              </form> -->
+
+              <div class="container">
+                <div class="row">
+              
+                  <div class="input form" style="    margin-top: 205px;
+                              margin-left: 25px; width: 900px;">
+                    <form action="{{url_for('predict')}}" method="post" id="input head">
+                      <h2 id="heading" style="margin-top: -200px;"> </h2>
+
+                  <div class="row  mt-3">
+                    <div class="col-md-3">
+                  
+                      <h5 id="input">Age</h5>
+                    </div>
+                    <div class="col-md-3 ">
+                      <input type="int" name="Age" place holder="Age">
+                    </div>
+                  </div>
+                  
+                  <div class="row  mt-3">
+                    <div class="col-md-3">
+                      <h5 id="input">Experience in years</h5>
+                    </div>
+                    <div class="col-md-5 ">
+                      <input type="int" name="Experience" place holder="Experience in years">
+                    </div>
+                  </div>
+                     
+                  <div class="row  mt-3">
+                    <div class="col-md-3">
+                     <h5 id="input">Special Projects Count</h5>
+                    </div>
+                    <div class="col-md-5 ">
+                    <input type="int" name="SpecialProjectsCount" place holder="Special Projects Count">
+                  </div>
+                </div>
+
+                <div class="row  mt-3">
+                  <div class="col-md-3">
+                    <h5 id="input">Race Description</h5>
+                  </div>
+                  <div class="col-md-5 ">
+                    <select name="RaceDesc">
+                      <option value="0">American Indian or Alaska Native</option>
+                      <option value="1">Asian</option>
+                      <option value="2">Black or African American</option>
+                      <option value="3">Hispanic </option>
+                      <option value="4">Two or more races </option>
+                      <option value="5">White </option>
+                    </select>
+                  </div>
+                </div>
+                   <!-- <div class="container2"> -->
+                   <!-- <div class="row"> -->
+                    <div class="row  mt-3">
+                      <div class="col-md-3">
+                        <!-- <div class="col-sm-4">  -->
+                        <h5 id="input">Department</h5>
+                      </div>
+                      <div class="col-md-5 ">
+                        <select name="DepartmentID">
+                          <option value="0">Admin Offices</option>
+                          <option value="1">Executive Office</option>
+                          <option value="2">IT/IS</option>
+                          <option value="3">Production</option>
+                          <option value="5">Software Engineering</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+                  <div class="row  mt-3">
+                  <div class="col-md-3">
+                    <h5 id="input">Position</h5>
+                    </div>
+                    <div class="col-md-5 ">
+                    <!-- <input type="int" name="PositionID" place holder="Position"> -->
+                    <select name="PositionID"> 
+                      <option value="1">Accountant I</option> 
+                      <option value="2">Administrative Assistant</option> 
+                     <option value="3">Area Sales Manager</option> 
+                      <option value="4">BI Developer</option> 
+                      <option value="5">BI Director</option> 
+                      <option value="6">CIO</option> 
+                      <option value="7">Data Analyst</option> 
+                      <option value="8">Data Architect</option> 
+                      <option value="9">Database Administrator</option> 
+                      <option value="10">Director of Operations </option> 
+                      <option value="11">Director of Sales </option> 
+                      <option value="12">Enterprise Architect</option> 
+                      <option value="13">IT Director</option> 
+                      <option value="14">IT Manager / DB</option> 
+                      <option value="15">IT Manager / Infra</option> 
+                      <option value="16">IT Manager / Support</option> 
+                      <option value="17">IT Support</option> 
+                      <option value="18">Network Engineer </option> 
+                      <option value="19">President & CEO</option> 
+                      <option value="20">Principal Data Architect </option> 
+                      <option value="21">Production Manager</option> 
+                      <option value="23">Production Technician I</option> 
+                      <option value="24">Production Technician II</option> 
+                      <option value="25">Sales Manager</option> 
+                      <option value="26">Senior BI Developer</option> 
+                      <option value="27">Shared Services Manager</option> 
+                      <option value="28">Software Engineer</option> 
+                      <option value="29">Software Engineering Manager</option> 
+                      <option value="30">Sr. Accountant</option>  
+                      <option value="31">Sr. DBA</option> 
+                      <option value="32">Sr. Network Engineer</option>  
+                    </select>
+                    </div>
+                  </div>
+                  
+                  <div class="row  mt-3">
+                    <div class="col-md-3">
+                    <h5 id="input">PerformanceScore</h5>
+                    </div>
+                    <div class="col-md-5 ">
+                    <!-- <input type="int" name="PerfScoreID" place holder="PerformanceScore"> -->
+                    <select name="PerfScoreID"> 
+                      <option value="1">Exceeds</option> 
+                      <option value="2">Fully Meets</option> 
+                      <option value="3">Needs Improvement</option> 
+                      <option value="4">PIP</option>
+                    </select>
+                    </div>
+                  </div>
+                  
+                  <div class="row  mt-3">
+                    <div class="col-md-3">
+                    <h5 id="input">carrierbreak</h5>
+                  </div>
+                  <div class="col-md-5 ">
+                    <input type="int" name="carrierbreak" place holder="carrierbreak">
+                  <!-- </div> -->
+                  </div> 
+                </div>       
+                   
+                    <br>
+                    <br>
+                    <button id="submit" type="submit" style=" margin-left: 400px;height: 42px; width: 100px;" class="bg-warning border rounded  p-2 text-center">Predict</button>
+                    </br>
+                    </br>
+                  </form>
+                 
+                </div>  
+
+              </div>
+
+                
+                <!-- <button class="submit" style="margin-left: 377px;
+                margin-top: 12px;" onclick="onClickedEstimatePrice()" type="button">Estimate Salary</button> -->
+                <!-- <button class="btn" style="margin-left: 362px;
+                margin-top: 23px;">
+                        Predict <span class="badge bg-success"></span>
+                </button> -->
+            </div>
+                <!-- <canvas id="myAreaChart" style="display: block; height: 320px; width: 885px;background: gray;" width="963" height="420" class="chartjs-render-monitor"></canvas>                -->
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="/static/js/jquery-3.3.1.slim.min.js"></script>
+   <script src="/static/js/popper.min.js"></script>
+   <script src="/static/js/bootstrap.min.js"></script>
+   <script src="/static/js/jquery-3.3.1.min.js"></script>
+  
+  
+  <script type="text/javascript">
+  $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+				$('#content').toggleClass('active');
+            });
+			
+			 $('.more-button,.body-overlay').on('click', function () {
+                $('#sidebar,.body-overlay').toggleClass('show-nav');
+            });
+			
+        });
+
+
+     
+           
+       
+</script>
+  
+  
+
+
+
+  </body>
+  
+  </html>
+
+
